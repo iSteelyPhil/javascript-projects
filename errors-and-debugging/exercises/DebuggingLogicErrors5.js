@@ -18,7 +18,7 @@ if (fuelLevel >= 20000) {
 
 console.log("Fuel Check Status:", fuelcheck);
 
-if (fuelcheck && crewStatus && computerStatus === 'green'){
+if (crewStatus && computerStatus === 'green'){
    console.log('Fuel, crew and computer cleared.');
    launchReady = true;
 } else {
