@@ -9,7 +9,7 @@ let computerStatus = 'green';
 let fuelcheck = false
 
 if (fuelLevel >= 20000) {
-   console.log('Fuel level cleared.');
+   console.log('Fuel levels cleared.');
    fuelcheck = true;
 } else {
    console.log('WARNING: Insufficient fuel!');
