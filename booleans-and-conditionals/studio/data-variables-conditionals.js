@@ -15,40 +15,65 @@ let maximumFuelTemp = -150
 let fuelLevel = "100%"
 let weatherStatus = "Clear"
 let preparedForLiftOff = true
+
+console.log("All systerms are a go! Initizlizing shuttle launch sequence.")
+console.log("------------------------------------------------------------")
+
+console.log("Date:", date);
+console.log("Time:", time);
+
 // add logic below to verify total number of astronauts for shuttle launch does not exceed 7
-if (astronautCount <=7){
-    if (astronautStatus === "Ready"){
-        if (totalMassKg <= maximumMassLimit){
-            if (fuelTempCelsius >= minimumFuelTemp || fuelTempCelsius <= maximumFuelTemp){
-                if (fuelLevel === "100%"){
-                    if (weatherStatus === "Clear"){
-                        if (preparedForLiftOff === true){
-        console.log("Astronaut Count:", astronautCount);
-        console.log("Astronauts Status", astronautStatus);
-        console.log("Total Mass:", totalMassKg);
-        console.log("Fuel Temp:", fuelTempCelsius);
-        console.log("Fuel Full");
-        console.log("Weather Status", weatherStatus);
-console.log("All systems go")
-                    }
-                }
-            }
-        }
-    }   
-} 
+if (astronautCount <= 7){
+    console.log("Astronaut Count:", astronautCount);
+} else if (astronautCount > 7){
+    console.log("Astronaut Count:", "ABORT: TOO MANY ASTRONUGHTS EXCEED WEIGHT");
+    preparedForLiftOff = false;
+}
+// add logic below to verify all astronauts are ready
+if (astronautStatus === "Ready"){
+        console.log("Astronauts Ready");
+    } else {
+        console.log("ABORT: ASTRONAUTS NOT READY");
+        preparedForLiftOff = false
+    }
+// add logic below to verify the total mass does not exceed the maximum limit of 850000
+if (totalMassKg <= maximumMassLimit){
+    console.log("Total Mass:", totalMassKg);
 } else {
-    console.log("ABORT")
+    console.log("ABORT: TOO MUCH PAYLOAD");
+    preparedForLiftOff = false
+}
+// add logic below to verify the fuel temperature is within the appropriate range of -150 and -300
+if (fuelTempCelsius >= minimumFuelTemp && fuelTempCelsius <= maximumFuelTemp){
+    console.log("Fuel Temperature:", fuelTempCelsius);
+} else {
+    console.log("ABORT: TEMP MALFUNCTION");
+    preparedForLiftOff = false
+}
+// add logic below to verify the fuel level is at 100%
+    if (fuelLevel === "100%"){
+        console.log("FUEL FULL")
+    } else {
+        console.log("ABORT: LOW FUEL")
+        preparedForLiftOff = false
+    }
+// add logic below to verify the weather status is clear
+    if (weatherStatus === "Clear"){
+        console.log("Weather Status:", weatherStatus)
+    } else {
+        console.log("ABORT: WAIT FOR BETTER WEATHER")
+        preparedForLiftOff = false
+    }
+// Verify shuttle launch can proceed based on above conditions
+if (preparedForLiftOff){
+    console.log("Go for Launch!");
+} else {
+    console.log("ABORT LAUNCH")
 }
 
+console.log("------------------------------------------------------------")
 
-// add logic below to verify all astronauts are ready
 
-// add logic below to verify the total mass does not exceed the maximum limit of 850000
-
-// add logic below to verify the fuel temperature is within the appropriate range of -150 and -300
-
-// add logic below to verify the fuel level is at 100%
-
-// add logic below to verify the weather status is clear
-
-// Verify shuttle launch can proceed based on above conditions
+if (preparedForLiftOff){
+    console.log("HAVE A SAFE TRIP ASTRONAUTS");
+}
