@@ -1,10 +1,39 @@
-//3) Use .slice() to print out the fifth gene (set of 3 characters) from the DNA strand.
-console.log(dnaTwo.slice(16,19));
-//4) Use a template literal to print, "The DNA strand is ___ characters long."
-console.log(`The DNA strand is ${dnaTwo.length} characters long`);
-//5) Just for fun, apply methods to ``dna`` and use another template literal to print, 'taco cat'.
-console.log(`${dnaTwo.slice(4,7).toLocaleLowerCase()}0
-${dnaTwo.indexOf("CAT").toLocaleLowerCase()})
+// Define the elements as arrays
+let element1 = ['hydrogen', 'H', 1.008];
+let element2 = ['helium', 'He', 4.003];
+let element26 = ['iron', 'Fe', 55.85];
 
+// Create a 2-dimensional array 'table' containing the elements
+let table = [];
+table.push(element1, element2, element26);
 
-console.log(`${dna.slice(4,7).toLowerCase()}o ${dna.slice(dna.indexOf('CAT'),dna.indexOf('CAT')+3).toLowerCase()}`);
+// Add another level to represent properties of each element
+let element1Properties = {
+    name: 'hydrogen',
+    symbol: 'H',
+    mass: 1.008
+};
+
+let element2Properties = {
+    name: 'helium',
+    symbol: 'He',
+    mass: 4.003
+};
+
+let element26Properties = {
+    name: 'iron',
+    symbol: 'Fe',
+    mass: 55.85
+};
+
+// Create a 3-dimensional array containing the elements and their properties
+let threeDimensionalArray = [
+    [element1, element1Properties],
+    [element2, element2Properties],
+    [element26, element26Properties]
+];
+
+// Print out one entry from each level in the array
+console.log(threeDimensionalArray[0]); // Print element1 and its properties
+console.log(threeDimensionalArray[1]); // Print element2 and its properties
+console.log(threeDimensionalArray[2]); // Print element26 and its properties

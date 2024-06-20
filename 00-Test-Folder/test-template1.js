@@ -1,21 +1,28 @@
-let num = 1001;
-let numstring = num.toString();
-let numlength = numstring.length
+let emptyarray = [];
+let programlanuages = ["JS", "Python", 'Java', 'C#'];
 
-//Returns 'undefined'.
+console.log(programlanuages)
+console.log(programlanuages[0]);
+console.log(programlanuages[3]);
 
+//SPLIT
 
-//Use type conversion to print the length (number of digits) of an integer.
-console.log(numlength);
-//Follow up: Print the number of digits in a DECIMAL value (e.g. num = 123.45 has 5 digits but a length of 6).
+let shuttleCrews = [
+    ['Robert Gibson', 'Mark Lee', 'Mae Jemison'],
+    ['Kent Rominger', 'Ellen Ochoa', 'Bernard Harris'],
+    ['Eilen Collins', 'Winston Scott',  'Catherin Coleman']
+];
 
-//Experiment! What if num could be EITHER an integer or a decimal?  Add an if/else statement so your code can handle both cases.
+console.log(shuttleCrews[0][2]);
+console.log(shuttleCrews[1][1]);
+console.log(shuttleCrews[2][1]);
 
-console.log(`${dnaTwo.slice(4,7).toLowerCase()}o ${dnaTwo.slice(dna.indexOf('CAT'),dnaTwo.indexOf('CAT')+3).toLowerCase()}`);
+let newCrew = ['Mark Polansky', 'Robert Curbeam', 'Joan Higginbotham'];
 
+// Add a new crew array to the end of shuttleCrews
+shuttleCrews.push(newCrew);
+console.log(shuttleCrews[3][2]);
 
-
-
-
-
-console.log(`${dnaTwo.slice(4,7).toLowerCase()}o${dnaTwo.slice(dnatwo.indexOf("CAT").toLowerCase())})
+// Reverse the order of the crew at index 1
+shuttleCrews[1].reverse();
+console.log(shuttleCrews[1]);
