@@ -41,11 +41,23 @@ function askForNumber() {
 
 function generatePassword(string1, string2) {
   let code = '';
-  let codes = (string1, string2)
-  for( i = 0; i < codes.length; i++) {
-   code += string1[i]+string2[i]
+  let codes = [];
+
+  /// Code your Bonus Mission Solution here ///
+  for (i = 0; i < string1.length; i++) {
+    codes.push(string1[i])
+    codes.push(string2[i])
+    
   }
   
+  for( i = 0; i < codes.length; i++) {
+    code += codes[i]
+  }
+
+  /*for (i =0; i < codes.length; i++) {
+    code += codes[i];
+  }
+  */
   return code;
 }
 

@@ -28,8 +28,8 @@ function mealAssembly(protein, grains, veggies, beverages, desserts, numMeals) {
 
 
 function askForNumber() {
-  
-  numMeals = input.question("How many meals would you like to make? (1-6) ");
+  numMeals = 0
+
   while (numMeals > 6 || numMeals < 1) {
     numMeals = input.question("How many meals would you like to make? (1-6) ");
   }
@@ -41,11 +41,22 @@ function askForNumber() {
 
 function generatePassword(string1, string2) {
   let code = '';
-  let codes = (string1, string2)
-  for( i = 0; i < codes.length; i++) {
-   code += string1[i]+string2[i]
+  let codes = [];
+
+  /// Code your Bonus Mission Solution here ///
+  for (i = 0; i < string1.length; i++) {
+    codes.push(string1[i].split(''))
+    codes.push(string2[i].split(''))
   }
   
+  for( i = 0; i < codes.length; i++) {
+    code += codes[i]
+  }
+
+  /*for (i =0; i < codes.length; i++) {
+    code += codes[i];
+  }
+  */
   return code;
 }
 
