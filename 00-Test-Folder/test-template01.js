@@ -1,5 +1,8 @@
-let name = "LaunchCode";
+let n = 6;
+let total = 0;
 
-for (let i = 0; i < name.length; i++) {
-   console.log(name[i]);
+for (let i = 1; i <= n; i++) {
+   total += i;
 }
+
+console.log(total);

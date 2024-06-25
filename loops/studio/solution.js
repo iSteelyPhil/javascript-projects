@@ -32,11 +32,10 @@ function askForNumber() {
   numMeals = input.question("How many meals would you like to make? ");
   
   /// CODE YOUR SOLUTION TO PART B here ///
-while (numMeals < 1 || numMeals > 6)
-  if (numMeals < 1 || numMeals >6) {
-    console.log("ERROR TOO LITTLE OR TO MANY MEAL INPUT. PLEASE INPUT BETWEEN 1-6: ")
+while (numMeals < 1 || numMeals > 6) {
+    console.log("ERROR TOO LITTLE OR TO MANY MEAL INPUT. PLEASE INPUT BETWEEN 1-6: ");
     numMeals = input.question("How many meals would you like to make? ");
-  } else{}
+  } 
   return numMeals;
 }
 
@@ -63,7 +62,7 @@ function runProgram() {
   /// Change the final input variable (aka numMeals) here to ensure your solution makes the right number of meals ///
   /// We've started with the number 2 for now. Does your solution still work if you change this value? ///
   
-  let meals = mealAssembly(protein, grains, veggies, beverages, desserts, 3);
+  let meals = mealAssembly(protein, grains, veggies, beverages, desserts, 2);
   console.log(meals)
   
 
@@ -79,7 +78,7 @@ function runProgram() {
 
    let password1 = 'vwxyzppp';
    let password2 = '12345';
-   console.log("Time to run the password generator so we can update the menu tomorrow.")
+   console.log("Time to run the password generator so we can update the menu tomorrow.");
    console.log(`The new password is: ${generatePassword(password1, password2)}`);
 }
 
