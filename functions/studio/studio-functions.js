@@ -2,7 +2,19 @@
 
 // Part One: Reverse Characters
 
-// 1. Define the function as reverseCharacters. Give it one parameter, which will be the string to reverse.
+let arr = 0
+
+
+function reverseCharacters(arr){
+    if (typeof arr === "string"){
+    return arr.split('').reverse().join('');
+    } else {(typeof arr === "number")
+        return Number(arr.toString().split('').reverse().join(''))
+    }
+}
+console.log(reverseCharacters('apple'));
+/////
+console.log("MISSION BREAK");
 // 2. Within the function, split the string into an array, then reverse the array.
 // 3. Use join to create the reversed string and return that string from the function.
 // 4. Below the function, define and initialize a variable to hold a string.
@@ -30,20 +42,54 @@ let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
+function arrayChange(arrCh){
+    let newArray = [];
+    for (i=0;i<arrCh.length;i++){
+        newArray.push(reverseCharacters(arrCh[i]));
+    }
+    return newArray;
+}
+console.log(arrayChange(arrayTest3));
+/////
+console.log("MISSION BREAK");
+/////
 // Bonus Missions
+function funPhrase(phrase){
+    fp = ""
+    if (phrase.length <= 3){
+        fp += phrase.slice(-1)
+    } else {
+        fp += phrase.slice(0, 3)
+    }
+    return fp
+}
+phraseWord = "Hello!"
 
+console.log(`We put the ${funPhrase('Hello!')} in ${phraseWord}`)
 // 1. Have a clear, descriptive name like funPhrase.
 // 2. Retrieve only the last character from strings with lengths of 3 or less.
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
 // 4. Use a template literal to return the phrase We put the '___' in '___'. Fill the first blank with the modified string, and fill the second blank with the original string.
 
 // Test Function
-
+/////
+console.log("MISSION BREAK");
+/////
+let str = 'Functions rock!'
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').
 // 2. Call your function and print the returned phrase.
-
+console.log(funPhrase(str));
+/////
+console.log("MISSION BREAK");
+/////
 // Area of rectangle equal to length x width
 
+function areaOfRectangle(length = width, width = length){
+    area = length * width
+    return area
+}
+let rectangle = areaOfRectangle(20);
+console.log(`The area is ${rectangle} cm^2`);
 // 1. Define a function with the required parameters to calculate the area of a rectangle.
 // 2. The function should return the area, NOT print it.
 // 3. Call your area function by passing in two arguments - the length and width.
