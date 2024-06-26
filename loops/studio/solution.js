@@ -1,3 +1,4 @@
+
 const input = require('readline-sync');
 
 // Part A: #1 Populate these arrays
