@@ -45,11 +45,11 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 function arrayChange(arrCh){
     let newArray = [];
     for (i=0;i<arrCh.length;i++){
-        newArray.push(reverseCharacters(arrCh[i]));
+        newArray.unshift(reverseCharacters(arrCh[i]));
     }
     return newArray;
 }
-console.log(arrayChange(arrayTest3));
+console.log(arrayChange(arrayTest1));
 /////
 console.log("MISSION BREAK");
 /////
@@ -57,15 +57,15 @@ console.log("MISSION BREAK");
 function funPhrase(phrase){
     fp = ""
     if (phrase.length <= 3){
-        fp += phrase.slice(-1)
+        fp += phrase.slice(phrase.length, -1)
     } else {
         fp += phrase.slice(0, 3)
     }
-    return fp
+    return console.log(`We put the ${fp} in ${phrase}`)
 }
-phraseWord = "Hello!"
 
-console.log(`We put the ${funPhrase('Hello!')} in ${phraseWord}`)
+
+
 // 1. Have a clear, descriptive name like funPhrase.
 // 2. Retrieve only the last character from strings with lengths of 3 or less.
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
@@ -84,8 +84,14 @@ console.log("MISSION BREAK");
 /////
 // Area of rectangle equal to length x width
 
-function areaOfRectangle(length = width, width = length){
-    area = length * width
+function areaOfRectangle(length, width ){
+    let area = ""
+    if (typeof width == "undefined"){
+        area = length * length
+    } 
+    else {length * width
+
+    }
     return area
 }
 let rectangle = areaOfRectangle(20);
