@@ -1,16 +1,20 @@
-const character = "#";
-const count = 8;
-const rows = [];
+let fileLogger = function(msg) {
 
+    // Put the message in a file
+}
 
-for (let i = 0; i < count; i = i + 1) {
-    rows.push(character.repeat(i + 1))
-  }
-  
-  let result = ""
-  
-  for (let row of rows) {
-    result = result + "\n" + row;
-  }
-  
-  console.log(result);
+let consoleLogger = function(msg) {
+
+    console.log(msg);
+}
+
+function logError(msg, loggers) {
+
+    let errorMsg = 'ERROR: ' + msg;
+
+    for (let i = 0; i < loggers.length; i++) {
+    loggers[i](errorMsg);
+    }
+}
+
+logError('Something broke!', [fileLogger, consoleLogger]);

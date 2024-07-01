@@ -1,13 +1,22 @@
-function reverse(str) {
-    let reversed = '';
+const input = require('readline-sync');
 
-    for (let i = 0; i < str.length; i++) {
-        reversed = str[i] + reversed;
+function getValidInput(prompt, isValid) {
+
+    
+    let userInput = input.question(prompt);
+
+    
+    while (!isValid(userInput)) {
+    console.log("Invalid input. Try again.");
+    userInput = input.question(prompt);
     }
-    return reversed;
+
+    return userInput;
 }
 
-function isPalindrome(str) {
-    return reverse(str) === str;
-}
-console.log(isPalindrome("rat"));
+
+let isEven = function(n) {
+    return Number(n) % 2 === 0;
+};
+
+console.log(getValidInput('Enter an even number:', isEven));

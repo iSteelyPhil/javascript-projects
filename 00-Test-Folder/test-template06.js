@@ -1,19 +1,11 @@
-let breadTypes = ["wheat", "white", "italian"];
-let fillingTypes = ["Turkey", "Chicken", "Beef"];
-let condimentTypes = ["Mayo", "Thousand Island", "Ranch"];
-
-function makeSandwich(breadType, fillingType, condiments) {
-    // Create the sandwich object
-    let sandwich = {
-        breadType: breadType,
-        fillingType: fillingType,
-        condiments: condiments
-    };
-
-    // Return the sandwich object
-    return sandwich;
+function combineEntries(arrayName){
+    if (arrayName.length <= 1){
+        return arrayName[0];
+    } else {
+        return arrayName[0]+combineEntries(arrayName.slice(1));
+    }
 }
 
-// Test the function
-let mySandwich = makeSandwich(breadTypes[1], fillingTypes[0], [condimentTypes[2], "Lettuce", "Tomato"]);
-console.log(mySandwich);
+let arr = ['L', 'C', '1', '0', '1'];
+let newString = '';
+console.log((combineEntries(arr)));

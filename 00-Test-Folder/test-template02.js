@@ -1,8 +1,22 @@
-let message = "Hello, World!";
+const input = require('readline-sync');
 
-function printMessage(localmessage) {
-    console.log(message);
-    console.log(localmessage)
-}
+function getValidInput(prompt, isValid) {
 
-printMessage("Goodbye");
+ 
+    let userInput = input.question(prompt);
+
+ 
+    while (!isValid(userInput)) {
+    console.log("Invalid input. Try again.");
+    userInput = input.question(prompt);
+    }
+
+    return userInput;
+};
+
+let isColor = function(userInput) {
+  return userInput.toLowerCase() === "red";
+};
+
+
+console.log(getValidInput('What color is this line? ', isColor));

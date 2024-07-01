@@ -1,16 +1,9 @@
-let condiments = ["Mayo", "Thousand Island", "Ranch"]
-function makeSandwich(breadType, fillingType, condiments) {
-  
-    let sandwich = {
-        breadType: breadType,
-        fillingType: fillingType,
-        condiments: condiments
-    };
+let nums = [3.14, 42, 4811];
 
 
-    return sandwich;
-}
+let halved = nums.map(function (n) {
+    return n/2
+});
 
-
-let mySandwich = makeSandwich("wheat", "Turkey", condiments[0]);
-console.log(mySandwich);
+console.log(nums);
+console.log(halved);
