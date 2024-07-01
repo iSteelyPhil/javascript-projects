@@ -1,22 +1,9 @@
-const input = require('readline-sync');
+let mum = 0
 
-function getValidInput(prompt, isValid) {
-
- 
-    let userInput = input.question(prompt);
-
- 
-    while (!isValid(userInput)) {
-    console.log("Invalid input. Try again.");
-    userInput = input.question(prompt);
+function updateValue (arr) {
+    for(let i=0;i < arr; i++){
+        console.log(arr[i]);
     }
-
-    return userInput;
-};
-
-let isColor = function(userInput) {
-  return userInput.toLowerCase() === "red";
-};
-
-
-console.log(getValidInput('What color is this line? ', isColor));
+    return arr;
+}
+console.log(updateValue([1,2,3,4,5]));

@@ -1,20 +1,10 @@
-let fileLogger = function(msg) {
-
-    // Put the message in a file
+function factorial(n) {
+  // Base case: if n is 0 or 1, return 1
+  if ( n === 1) {
+    return 1;
+  }
+  // Recursive case: multiply n by the factorial of n-1
+  return n * factorial(n - 1);
 }
 
-let consoleLogger = function(msg) {
-
-    console.log(msg);
-}
-
-function logError(msg, loggers) {
-
-    let errorMsg = 'ERROR: ' + msg;
-
-    for (let i = 0; i < loggers.length; i++) {
-    loggers[i](errorMsg);
-    }
-}
-
-logError('Something broke!', [fileLogger, consoleLogger]);
+console.log(factorial(2)); // Output: 120

@@ -18,7 +18,7 @@ function holdStatus(arr){
   }
 }
 
-let fuelLevel = 200000;
+let fuelLevel = 150000;
 let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold', 'water', 'AE-35 unit'];
 
 console.log("Fuel level: " + checkFuel(fuelLevel));
