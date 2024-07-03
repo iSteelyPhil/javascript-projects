@@ -59,3 +59,5 @@ function findMaxValue(arr){
   console.log(sortMaxValues(nums4));
   console.log(sortMaxValues(nums5));
   console.log(sortMaxValues(nums6));
+
+  //////////////////////
