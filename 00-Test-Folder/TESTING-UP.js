@@ -20,7 +20,7 @@ function findMinValue(arr){
     }
     return min;
   }
-//test
+
   function sortValues(arr) {
     let sortedArray = [];
   
