@@ -8,16 +8,6 @@ function randomSelection(arr){
 
 
 
-function buildCrew(arr1, arr2){
-  crew = [];
-  for (let animal of arr1 ) {
-      if(arr2.includes(animal.astronautID)){
-          crew.push(animal);
-      }
-  }
-  return crew;
-}  
-
 let luckyNumbers = [796, 599, 291]
 let idNumbers = [291, 414, 503, 599, 796, 890];
 

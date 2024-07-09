@@ -3,12 +3,10 @@
 
 // Code your missionDuration function here:
 
-
 // Copy/paste your selectRandomEntry function here:
 
 
 // Code your oxygenExpended function here:
-
 
 // Candidate data & crew array.
 let candidateA = {
