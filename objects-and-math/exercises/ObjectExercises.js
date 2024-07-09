@@ -80,7 +80,7 @@ console.log(tardigrade.crewReports());
 console.log("TEST BREAK");
 // Start an animal race!
 function fitnessTest(candidates){
-   let results = [], steps, turns
+   let results = [], steps, turns;
    for (i = 0; i<candidates.length; i++){
       steps = 0
       turns = 0
