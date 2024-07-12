@@ -10,8 +10,6 @@ function tripleRandom(array) {
     if (!newArray.includes(numbers)) {
       newArray.push(numbers);
     }
-  
-
 }
     return newArray;
   }
