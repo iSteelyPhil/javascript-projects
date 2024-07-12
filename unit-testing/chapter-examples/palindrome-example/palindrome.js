@@ -5,5 +5,5 @@ function reverse(str) {
  function isPalindrome(str) {
    return reverse(str) === str;
  }
- 
+/*  isPalindrome("aabbaa"); */
  module.exports = isPalindrome;
