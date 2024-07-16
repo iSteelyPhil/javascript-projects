@@ -2,8 +2,8 @@ const divide = require("../divide.js")
 
 describe("the divide function", function(){
 
-    test('should divide num by den', function(){
-        expect(divide(5,5)).toEqual(1);
+    test('should divide numerator by denominator', function(){
+        expect(divide(10,0)).toEqual(2);
     });
 
 });
