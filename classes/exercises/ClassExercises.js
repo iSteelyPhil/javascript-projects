@@ -12,6 +12,12 @@ class Book {
     rentals(rents=1){
         this.bookRentals += rents
     }
+  /*   dispose(currentYear){
+        if (currentYear-this.copyrightDate > 5) {
+           this.bookDiscarded = 'Yes';
+        }
+    } */
+    
 }
 
 // Define your Manual and Novel classes here:
