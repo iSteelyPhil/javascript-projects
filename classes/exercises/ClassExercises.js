@@ -53,3 +53,6 @@ console.log(pridPred)
 
 shuttleBuild.rentals();
 console.log(shuttleBuild);
+
+
+
