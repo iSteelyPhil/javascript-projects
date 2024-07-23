@@ -74,18 +74,13 @@ console.log(`${gator.name} earned an average test score of ${gator.avgScore()}% 
 gator.addScore(100);
 console.log(`${gator.name} earned an average test score of ${gator.avgScore()}% and has a status of ${gator.status()}.`); */
 let gatorLoop = function(){
-    let tests = gator.avgScore();
-   while(tests<90){
-        if(tests<= 90){
-            gator.addScore(100)
-            gatorLoop()
-        }else{
-            return gator.scores.length
-        }
-        
+   while(gator.avgScore() <= 90){
+        gator.addScore(100)
     }
-    
+     return gator.scores.length
 }
+    
+
 console.log(gatorLoop());
-/* console.log(`It took ${gator.name} ${gatorLoop(gator.avgScore())} tests to finally reach ${gator.status()}!`); */
+console.log(`It took ${gator.name} ${gatorLoop()} tests to finally reach ${gator.status()}!`);
 console.log(`${gator.name} earned an average test score of ${gator.avgScore()}% and has a status of ${gator.status()}.`);
