@@ -7,7 +7,6 @@ let divide = function(numerator,denominator){
     result = numerator / denominator
     return result
 }
-console.log(divide(10,0));
 // Your function should return the result of numerator / denominator.
 
 // However, if the denominator is zero you should throw the error, "Attempted to divide by zero."
