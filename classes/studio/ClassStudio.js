@@ -6,10 +6,25 @@ class CrewCandidate {
     this.scores = scores;
     
     }
-    status(avgScore()){
+    avgScore = function(scores){
+        this.scores = 0
+        for(let i = 0; i<scores.length;i++){
+            this.scores+= scores[i]
+        }
+        return this.score = Math.round(this.scores/scores.length)
+    }
+    
+
+    status(){
         if(avgScore >= 90){
             return "Accepted"
-        }else if( avgScore >80)
+        }else if( avgScore >80){
+            return 'Reserve'
+        }else if( avgScore >70){
+            return 'Probationary'
+        }else{
+            return 'rejection'
+        }
     }
 }
 let bear = new CrewCandidate('Bubba Bear', 135, [88,85,90]);
@@ -23,16 +38,15 @@ CrewCandidate.prototype.addScore = function(newScore){
     return this.scores.push(newScore)
 };
 
-/* bear.addScore(95);
-console.log(bear); */
 
-CrewCandidate.prototype.avgScore = function(scores){
+
+/* CrewCandidate.prototype.avgScore = function(scores){
     this.scores = 0
     for(let i = 0; i<scores.length;i++){
         this.scores+= scores[i]
     }
     return this.score = Math.round(this.scores/scores.length)
-}
+} */
 
 bear.avgScore(bear.scores)
 console.log(bear)
@@ -43,4 +57,5 @@ gator.avgScore(bear.scores)
 CrewCandidate.prototype.status() = function(){
 
 }
+bear.status()
 //Part 4 - Use the methods to boost Glad Gator’s status to Reserve or higher. How many tests will it take to reach Reserve status? How many to reach Accepted? Remember, scores cannot exceed 100%.
