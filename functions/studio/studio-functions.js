@@ -2,17 +2,17 @@
 
 // Part One: Reverse Characters
 
-let arr = 0
+let arr = 0;
 
-
-function reverseCharacters(arr){
-    if (typeof arr === "string"){
-    return arr.split('').reverse().join('');
-    } else {(typeof arr === "number")
-        return Number(arr.toString().split('').reverse().join(''))
-    }
+function reverseCharacters(arr) {
+  if (typeof arr === "string") {
+    return arr.split("").reverse().join("");
+  } else {
+    typeof arr === "number";
+    return Number(arr.toString().split("").reverse().join(""));
+  }
 }
-console.log(reverseCharacters('apple'));
+console.log(reverseCharacters("apple"));
 /////
 console.log("MISSION BREAK");
 // 2. Within the function, split the string into an array, then reverse the array.
@@ -38,33 +38,31 @@ console.log("MISSION BREAK");
 // 5. Return the final, reversed array.
 // 6. Be sure to print the results from each test case in order to verify your code.
 
-let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
+let arrayTest1 = ["apple", "potato", "Capitalized Words"];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
-let arrayTest3 = ['hello', 'world', 123, 'orange'];
+let arrayTest3 = ["hello", "world", 123, "orange"];
 
-function arrayChange(arrCh){
-    let newArray = [];
-    for (i=0;i<arrCh.length;i++){
-        newArray.unshift(reverseCharacters(arrCh[i]));
-    }
-    return newArray;
+function arrayChange(arrCh) {
+  let newArray = [];
+  for (i = 0; i < arrCh.length; i++) {
+    newArray.unshift(reverseCharacters(arrCh[i]));
+  }
+  return newArray;
 }
 console.log(arrayChange(arrayTest1));
 /////
 console.log("MISSION BREAK");
 /////
 // Bonus Missions
-function funPhrase(phrase){
-    fp = ""
-    if (phrase.length <= 3){
-        fp += phrase.slice(phrase.length, -1)
-    } else {
-        fp += phrase.slice(0, 3)
-    }
-    return console.log(`We put the ${fp} in ${phrase}`)
+function funPhrase(phrase) {
+  fp = "";
+  if (phrase.length <= 3) {
+    fp += phrase.slice(phrase.length, -1);
+  } else {
+    fp += phrase.slice(0, 3);
+  }
+  return console.log(`We put the ${fp} in ${phrase}`);
 }
-
-
 
 // 1. Have a clear, descriptive name like funPhrase.
 // 2. Retrieve only the last character from strings with lengths of 3 or less.
@@ -75,7 +73,7 @@ function funPhrase(phrase){
 /////
 console.log("MISSION BREAK");
 /////
-let str = 'Functions rock!'
+let str = "Functions rock!";
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').
 // 2. Call your function and print the returned phrase.
 console.log(funPhrase(str));
@@ -84,15 +82,14 @@ console.log("MISSION BREAK");
 /////
 // Area of rectangle equal to length x width
 
-function areaOfRectangle(length, width ){
-    let area = ""
-    if (typeof width == "undefined"){
-        area = length * length
-    } 
-    else {length * width
-
-    }
-    return area
+function areaOfRectangle(length, width) {
+  let area = "";
+  if (typeof width == "undefined") {
+    area = length * length;
+  } else {
+    length * width;
+  }
+  return area;
 }
 let rectangle = areaOfRectangle(20);
 console.log(`The area is ${rectangle} cm^2`);

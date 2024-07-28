@@ -1,10 +1,10 @@
 function reverse(str) {
-   return str.split('').reverse().join('');
+  return str.split("").reverse().join("");
 }
 
 function isPalindrome(str) {
-   return reverse(str) === str;
+  return reverse(str) === str;
 }
 
 console.log(reverse("rat"));
-console.log(isPalindrome('racecar'));
+console.log(isPalindrome("racecar"));
